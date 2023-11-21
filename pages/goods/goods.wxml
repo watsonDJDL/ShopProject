@@ -1,0 +1,27 @@
+<!--pages/goods.wxml-->
+<view class="home-page-header">
+  <view class="header-swiper-wrapper">
+    <swiper indicator-dots="{{true}}" autoplay="{{swiperAutoplay}}" interval="{{swiperInterval}}" duration="{{swiperDuration}}">
+      <block wx:for="{{advertiseImages}}" wx:for-index="index" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="swip-image"/>
+        </swiper-item>
+      </block>
+    </swiper>
+    <!-- TODO:lwx 这里添加swiper事件响应 -->
+  </view>
+
+
+  <view  class="home-container-wrapper">
+      <view class="card-list">
+        <block wx:for="{{cardItems}}" wx:for-index="index" wx:key="index">
+           <view class="card">
+            <image src="{{item.img}}" mode="aspectFit" class="good-image"/>
+            <view>
+              {{cardItems[index].text}}
+            </view>
+           </view>
+         </block>
+     </view>
+    </view>
+</view>
