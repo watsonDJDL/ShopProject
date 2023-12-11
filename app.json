@@ -1,13 +1,14 @@
 {
   "pages": [
+    "pages/goods/goods",
     "pages/index/index",
     "pages/logs/logs",
-    "pages/goods/goods"
+    "pages/detail/detail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Weixin",
+    "navigationBarTitleText": "舒瑾的小店",
     "navigationBarTextStyle": "black"
   },
   "style": "v2",
