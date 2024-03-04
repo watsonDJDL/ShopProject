@@ -1,0 +1,142 @@
+/* pages/detail.wxss */
+
+.detail-page-header {
+  background: linear-gradient(#fff, #f5f5f5);
+  display: block;
+  width: 100%;
+  height: 390px;
+  border-radius: 10rpx 20rpx;
+}
+
+.detail-page-header .detail-swiper-wrapper {
+  height: 390px;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+  margin-left: 20rpx;
+  border-radius: 10rpx 20rpx;
+}
+
+.swip-image {
+  width: 100%;
+  height:390px;
+  border-radius: 10rpx ;
+}
+
+.good-title {
+  display: flex;
+  justify-content: space-between; /* 在主轴上两端对齐，子元素分别左对齐和右对齐 */
+  flex-direction: column;
+}
+
+.good-title-top {
+  display: flex;
+  justify-content: space-between;
+  flex-direction:row;
+  margin-top: 32rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.good-title-price {
+  margin-left: 20px;
+  color: rgb(241, 44, 44);
+  font-size: 35px;
+}
+
+.share_button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15rpx;
+  min-width: 60%;
+  background-color: #e05353; /* 浅红色背景 */
+  border-radius: 16px; /* 圆角 */
+  padding: 10px 20px; /* 控制内边距，调整按钮大小 */
+  color: #fff; /* 文字颜色，可以根据需要调整 */
+  font-size: 16px; /* 字体大小，可以根据需要调整 */
+  text-align: center; /* 文字居中 */
+  margin-top: 15px;
+  /* 其他样式 */
+}
+
+.share-icon {
+  width: 20px; /* 调整图标宽度 */
+  height: 20px; /* 调整图标高度 */
+  margin-right: 6px;
+}
+
+.horizontal-line {
+  margin-top: 40px;
+  width: 88%;
+  height: 1px;
+  background: repeating-linear-gradient(to right, rgb(168, 164, 164), rgb(168, 163, 163) 5px, transparent 5px, transparent 10px);
+  margin-left: 6%;
+}
+
+
+.good-detail-description {
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* 纵向排列子元素 */
+  align-items: center; /* 子元素水平居中 */
+  margin-top: 30rpx;
+}
+
+.description-title {
+  font-size: 22px;
+  font-style: italic;
+  color: rgb(90, 86, 86);
+
+}
+
+.description-text {
+  width: 88%;
+  font-size: 14px;
+  margin-top: 20rpx;
+}
+
+.bottom-placeholder-blank {
+  height: 80px;
+}
+
+.back-home-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20px;
+  margin-bottom: 10px;
+  position: fixed;
+}
+.bottom-home-button {
+position: fixed;
+bottom: 20px;
+width: 100%;
+display: flex;
+flex-direction: column; /* 纵向排列子元素 */
+align-items: center; /* 子元素水平居中 */
+justify-content: flex-end; /* 子元素底部对齐 */
+}
+
+.home-icon {
+  position: absolute;
+  width: 20px; /* 调整图标宽度 */
+  height: 20px; /* 调整图标高度 */
+  margin-bottom: 10px;
+}
+
+.bottom-home-background {
+  width: 40px; /* 设置圆的直径，根据需要调整 */
+  height: 40px; /* 设置圆的直径，保持与宽度相等，形成一个正圆 */
+  background-color: #f55252; /* 圆的背景颜色 */
+  border-radius: 50%; /* 将矩形设置为圆形 */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* 添加阴影效果，根据需要调整阴影样式 */
+}
+.share-tip-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 子元素水平居中 */
+  color: gray;
+  font-size: 12px;
+  margin-top: 5px;
+}

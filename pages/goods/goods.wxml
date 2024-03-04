@@ -1,0 +1,35 @@
+<!--pages/goods.wxml-->
+<block wx:if="{{advertiseImages.length > 0}}">
+  <view class="home-page-header">
+    <view class="header-swiper-wrapper">
+      <swiper indicator-dots="{{true}}" autoplay="{{swiperAutoplay}}" interval="{{swiperInterval}}" duration="{{swiperDuration}}">
+        <block wx:for="{{advertiseImages}}" wx:for-index="index" wx:key="index">
+          <swiper-item>
+            <image src="{{item}}" class="swip-image"/>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+</block>
+
+
+  <view  class="home-container-wrapper">
+      <view class="card-list">
+        <block wx:for="{{cardItems}}" wx:for-index="index" wx:key="index">
+           <view bind:tap="handleCardTap" data-goodId="{{item.id}}" class="card ">
+            <image src="{{item.img}}" mode="widthFix"  class="good-image"/>
+            <!-- <view>  {{cardItems[index].name}}    </view> -->
+            <view class="bottom-des-area">
+                <view class="good-description"> 
+                    <text> {{cardItems[index].name}} </text>
+                </view>
+                <view class="good-price-text"> 
+                    <text>{{cardItems[index].price < 0 ? '?' : cardItems[index].price}}</text> 
+                </view>
+            </view>
+
+           </view>
+         </block>
+     </view>
+</view>

@@ -1,0 +1,42 @@
+<!--pages/detail.wxml-->
+<block wx:if="{{goodDetailInfo.imgs.length > 0}}">
+  <view class="detail-page-header">
+    <swiper class="detail-swiper-wrapper" indicator-dots="{{false}}" autoplay="{{swiperAutoplay}}" interval="{{swiperInterval}}" duration="{{swiperDuration}}" >
+        <block wx:for="{{goodDetailInfo.imgs}}" wx:for-index="index" wx:key="index">
+          <swiper-item>
+            <image src="{{item}}" class="swip-image" mode="aspectFit"/>
+          </swiper-item>
+        </block>
+    </swiper>
+  </view>
+</block>
+
+<view class="good-title">
+  <view class="good-title-top">
+    <text>{{goodDetailInfo.name}}</text>
+    <view class="good-title-price">
+      <text> {{goodDetailInfo.price < 0 ? '?' : goodDetailInfo.price}}</text>
+      <!-- <text> {{goodDetailInfo.originPrice}}  </text> -->
+    </view>
+  </view>
+
+  <button class="share_button" open-type="share"> 
+    <image class="share-icon" src="/images/good_share.png" mode="aspectFit"  />
+    <text class="button-text">分享</text>
+  </button>
+  <text class="share-tip-text"> (感兴趣可以分享物品咨询哦~)</text>
+</view>
+
+<view class="horizontal-line"></view>
+
+<view class="good-detail-description">
+  <text class="description-title">商品描述</text>
+  <text class="description-text">{{goodDetailInfo.des}}</text>
+</view>
+
+<view class="bottom-placeholder-blank"></view>
+
+<view class="bottom-home-button" bind:tap="handleBackHome">
+  <image class="home-icon" src="/images/return.png" mode="aspectFit"  />
+  <view class="bottom-home-background"></view>
+</view>
